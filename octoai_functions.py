@@ -15,8 +15,8 @@ client = Client() # token can be set in Client instantiation if not an env varia
 public_endpoint = "https://stable-diffusion-xl-demo-kk0powt97tmb.octoai.cloud"
 private_endpoint = "https://stable-diffusion-xl-demo-05v073pgec1v.octoai.cloud"
 
-stable_diffusion_url = public_endpoint + "/predict"
-sd_health_check = public_endpoint + "/healthcheck"
+stable_diffusion_url = private_endpoint + "/predict"
+sd_health_check = private_endpoint + "/healthcheck"
 
 
 def get_image_name():
