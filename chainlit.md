@@ -1,14 +1,12 @@
-# Welcome to Chainlit! 🚀🤖
+# Welcome to Stable Diffusion XL 1.0 Demo! 🚀🤖
 
-Hi there, Developer! 👋 We're excited to have you on board. Chainlit is a powerful tool designed to help you prototype, debug and share applications built on top of LLMs.
+Hi Creative Genius! 👋 We're excited to have you on board. Stable Diffusion XL 1.0 is the latest AI image generation model from Stability.ai. It is on par with Midjourney in terms of quality.
 
 ## Useful Links 🔗
 
-- **Documentation:** Get started with our comprehensive [Chainlit Documentation](https://docs.chainlit.io) 📚
-- **Discord Community:** Join our friendly [Chainlit Discord](https://discord.gg/ZThrUxbAYw) to ask questions, share your projects, and connect with other developers! 💬
+- **Prompt Ideas:** Get started with some helpful tips for Stable Diffusion prompts from [AI Tuts](https://aituts.com/stable-diffusion-prompts/) 
+- **Examples:** Checkout some cool examples of images created by Stable Diffusion XL 1.0 at [Tensor Art](https://tensor.art/posts/?tag=612161207939431725)
 
-We can't wait to see what you create with Chainlit! Happy coding! 💻😊
+We can't wait to see what you create with our Demo! Happy creating! 💻😊
 
-## Welcome screen
 
-To modify the welcome screen, edit the `chainlit.md` file at the root of your project. If you do not want a welcome screen, just leave this file empty.

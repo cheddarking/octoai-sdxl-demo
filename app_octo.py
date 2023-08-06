@@ -10,7 +10,7 @@
 import openai
 import chainlit as cl
 from chainlit.action import Action
-from config import OPENAI_API_KEY, OCTO_SYSTEM_PROMPT
+from config import OCTO_SYSTEM_PROMPT
 import re
 import json
 import asyncio
@@ -69,7 +69,7 @@ settings = {
 gpt3 = "gpt-3.5-turbo-0613"
 gpt4 = "gpt-4-0613"
 
-ai = AsyncAIChat(api_key=OPENAI_API_KEY, 
+ai = AsyncAIChat(api_key="key", 
         system=OCTO_SYSTEM_PROMPT, 
         model=gpt3,
         console=False, 
