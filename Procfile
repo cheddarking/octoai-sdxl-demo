@@ -1,0 +1,1 @@
+web: python -m chainlit run app_octo_cl_0.6.py -h --port 8080

@@ -52,7 +52,7 @@ functions=[
             },
         },
     ]
-async def octo_gen(prompt):
+def octo_gen(prompt):
     '''Generate an image using the prompt'''
     image_response, image = generate_image(prompt)
     return image_response, image
@@ -78,26 +78,26 @@ ai = AsyncAIChat(api_key="key",
 
 
 @cl.on_chat_start
-async def start_chat():
+def start_chat():
 
-    cl.Avatar(
-        name="stability.ai",
-        url="https://avatars.githubusercontent.com/u/100950301?s=200&v=4",
-    ).send()
-    cl.Avatar(
-        name="leonardo.ai",
-        url="https://avatars.githubusercontent.com/u/115455698?s=200&v=4",
-    ).send()
-    cl.Avatar(
-        name="chatgpt",
-        url="https://avatars.githubusercontent.com/u/14957082?s=200&v=4",
-    ).send()
-    cl.Avatar(
-        name="octoai",
-        url="https://avatars.githubusercontent.com/u/53242847?s=200&v=4",
-    ).send()
+    # cl.Avatar(
+    #     name="stability.ai",
+    #     url="https://avatars.githubusercontent.com/u/100950301?s=200&v=4",
+    # ).send()
+    # cl.Avatar(
+    #     name="leonardo.ai",
+    #     url="https://avatars.githubusercontent.com/u/115455698?s=200&v=4",
+    # ).send()
+    # cl.Avatar(
+    #     name="chatgpt",
+    #     url="https://avatars.githubusercontent.com/u/14957082?s=200&v=4",
+    # ).send()
+    # cl.Avatar(
+    #     name="octoai",
+    #     url="https://avatars.githubusercontent.com/u/53242847?s=200&v=4",
+    # ).send()
 
-    await cl.Message(
+    cl.Message(
         content="Welcome! Please enter your prompt to generate an image", author="octoai"
     ).send()
 #     # send a welcome message to the user and ask them to provide a prompt
@@ -105,8 +105,8 @@ async def start_chat():
 
 
 @cl.on_message
-async def main(message: str):     
-    await cl.Message(author="octoai", content="").send()
+def main(message: str):     
+    cl.Message(author="octoai", content="").send()
 
     completions = []
 
@@ -149,7 +149,7 @@ async def main(message: str):
     # convert completions list to string
     # response = ''.join(completions)
 
-    image_response, image = await octo_gen(message)
+    image_response, image = octo_gen(message)
 
     image_name = cl.user_session.get("generated_image")
 
@@ -161,7 +161,7 @@ async def main(message: str):
             display="inline",
             )
         ]
-        await cl.Message(author="octoai", content=image_response, elements=elements).send()
+        cl.Message(author="octoai", content=image_response, elements=elements).send()
 
 
 
